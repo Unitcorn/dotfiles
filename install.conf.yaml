@@ -1,17 +1,20 @@
 - defaults:
-        link:
-                relink: true
+    link:
+      create: true
+      relink: true 
 
 - clean: ['~']
 
 - link:
-        ~/.tmux.conf: 
-        ~/.vim: 
-        ~/.vimrc:
-          relink: true
+    ~/.bashrc:
+      force: true
+    ~/.tmux.conf:
+    ~/.vim:  
+      path: vim
+    ~/.vimrc: 
+      relink: true 
 
 - create:
-        - ~/.vim/undo-history
         - ~/playground
 
 - shell:
