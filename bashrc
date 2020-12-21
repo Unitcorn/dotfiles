@@ -112,7 +112,8 @@ if ! shopt -oq posix; then
   fi
 fi
 
-source /home/joel/.config/broot/launcher/bash/br
+# if user is joel then source br
+if [[ "$(whoami)" == "joel" ]]; then {source /home/joel/.config/broot/launcher/bash/br}; fi
 
 # starts bash in vi mode
 set -o vi
