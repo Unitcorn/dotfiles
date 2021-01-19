@@ -124,7 +124,11 @@ fi
 set -o vi
 
 # minimal working directory prompt
-export PS1='${debian_chroot:+($debian_chroot)}\[\033[0;35m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w \$\[\033[00m\]\n'
+# export PS1='${debian_chroot:+($debian_chroot)}\[\033[0;35m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w \$\[\033[00m\]\n'
+
+# custom colorful working directory prompt
+PS1="\[\033[0;46m\][\l]\[\033[0;35m\]\u@\[\033[0;36m\]\h\[\033[0;34m\] \w\n\[\033[0m\]\s$ "
+export PS1
 
 # vim as default text editor
 export EDITOR='vim'
